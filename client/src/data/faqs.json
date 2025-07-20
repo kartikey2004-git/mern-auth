@@ -1,0 +1,32 @@
+[
+  {
+    "question": "What is JobConnect?",
+    "answer":
+      "JobConnect is a job portal that allows companies to post job listings and users to search and apply for jobs. It provides features for both job seekers and employers, with a clean interface and secure login."
+  },
+  {
+    "question": "How do I post a job?",
+    "answer":
+      "As an employer, you can post a job by going to the 'Post Job' section after logging in. Fill in the job details and submit the form to create a listing."
+  },
+  {
+    "question": "How can I search for jobs?",
+    "answer":
+      "Job seekers can use keywords, location, category, and other filters in the search bar or on the dedicated job search page to find relevant listings."
+  },
+  {
+    "question": "How do I apply for a job?",
+    "answer":
+      "Click on a job listing and follow the instructions to apply. Usually, you'll need to upload your resume and fill out any required details."
+  },
+  {
+    "question": "Can I save jobs to apply later?",
+    "answer":
+      "Yes. Just click the 'Save Job' button on any listing. Saved jobs are available under your profile in the 'Saved Jobs' section."
+  },
+  {
+    "question": "How do I track my job applications?",
+    "answer":
+      "Go to the 'Applications' section in your profile. You'll see the status and progress of every job you've applied to."
+  }
+]

@@ -1,0 +1,32 @@
+[
+  {
+    "title": "Job Search",
+    "content":
+      "Smart filters, instant alerts, and AI role-fit matching help you find better jobs, faster."
+  },
+  {
+    "title": "Post Jobs",
+    "content":
+      "Companies and startups can publish openings in minutes and track applicants easily."
+  },
+  {
+    "title": "Apply Instantly",
+    "content":
+      "Save time with quick apply, smart autofill, and resume optimization suggestions."
+  },
+  {
+    "title": "AI Resume Analyzer",
+    "content":
+      "Get detailed feedback on your resume's structure, keywords, and relevance."
+  },
+  {
+    "title": "AI Resume Builder",
+    "content":
+      "Build ATS-friendly resumes with guided prompts, templates, and instant previews."
+  },
+  {
+    "title": "Smart Suggestions",
+    "content":
+      "From wording tweaks to design nudges, get real-time tips as you write."
+  }
+]
