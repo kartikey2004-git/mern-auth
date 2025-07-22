@@ -1,15 +1,29 @@
+import React, { useEffect } from "react";
+import { Outlet, useLocation } from "react-router-dom";
 import Navbar from "@/components/Navbar";
-import { Outlet } from "react-router-dom";
 
 const AppLayout = () => {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (location.hash) {
+      const id = location.hash.replace("#", "");
+      const element = document.getElementById(id);
+
+      if (element) {
+        setTimeout(() => {
+          element.scrollIntoView({ behavior: "smooth" });
+        }, 100); // delay helps when navigating between pages
+      }
+    }
+  }, [location]);
+  
   return (
     <div>
-      <main className="min-h-screen bg-gradient-to-br from-[#0d0333] to-[#030220] text-white mx-auto">
+      <main className="min-h-screen bg-[#161636] text-white mx-auto">
         <Navbar />
-        {/* Body */}
         <Outlet />
       </main>
-      
     </div>
   );
 };

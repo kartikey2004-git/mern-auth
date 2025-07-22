@@ -18,13 +18,16 @@ const FeaturesCard = () => {
   return (
     <>
       {/* Features Section */}
-      <section className="mx-auto px-6 py-24 lg:px-20 bg-[#161636]  w-full">
+      <section
+        id="features"
+        className="mx-auto px-6 py-24 lg:px-20 bg-[#161636]  w-full"
+      >
         <div className="text-center mb-14">
           <h3 className="text-3xl text-center text-purple-400 font-semibold tracking-wider mb-2">
             Who is JobConnect For?
           </h3>
 
-          <h2 className="text-3xl sm:text-xl font-semibold mb-3 text-center">
+          <h2 className="text-3xl sm:text-xl  mb-3 text-center">
             Built for Candidates, Professionals, and Recruiters
           </h2>
 

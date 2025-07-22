@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { AppContext } from "@/context/AppContext";
 import axios from "axios";
@@ -49,10 +48,11 @@ const EmailVerify = () => {
       const otpArray = inputRef.current.map((e) => e.value);
       const otp = otpArray.join("");
 
+      axios.defaults.withCredentials = true;
+
       const { data } = await axios.post(
-        `${backendUrl}/api/auth/verify-account`,
-        { otp },
-        { withCredentials: true }
+        backendUrl + "/api/auth/verify-account",
+        { otp }
       );
 
       if (data.success) {
@@ -74,15 +74,15 @@ const EmailVerify = () => {
   }, [isLoggedIn, userData, navigate]);
 
   return (
-    <div className="flex justify-center items-center min-h-screen  bg-background text-foreground">
+    <div className="flex justify-center items-center min-h-screen  bg-[#161636] text-foreground">
       <form
         onSubmit={onSubmitHandler}
-        className="bg-white p-8 rounded-lg shadow-lg w-96 text-sm"
+        className="bg-white/10 backdrop-blur-md border border-white/20 p-8 rounded-xl shadow-xl w-96 text-sm"
       >
-        <h1 className="text-2xl text-black font-semibold text-center mb-4">
+        <h1 className="text-2xl text-white font-semibold text-center mb-2">
           Email Verify OTP
         </h1>
-        <p className="text-center mb-6 text-gray-600">
+        <p className="text-center mb-6 text-gray-300">
           Enter the 6-digit code sent to your email id.
         </p>
 
@@ -95,16 +95,16 @@ const EmailVerify = () => {
                 type="text"
                 maxLength={1}
                 required
-                className="w-12 h-12 dark:text-black  bg-transparent border border-gray-300 dark:border-gray-600 text-center text-xl font-semibold focus:outline-none focus:ring-2 focus:ring-primary rounded-md"
+                className="w-12 h-12 text-white bg-transparent border border-gray-400 text-center text-xl font-bold focus:outline-none focus:ring-2 focus:ring-[#9f59ff] rounded-md"
                 ref={(e) => (inputRef.current[index] = e)}
                 onInput={(e) => handleInput(e, index)}
                 onKeyDown={(e) => handleKeyDown(e, index)}
               />
             ))}
         </div>
-        <Button className="w-full py-3 text-white bg-black rounded-full">
+        <button className="w-full py-3 text-white bg-[#9f59ff] hover:bg-[#a84bff] rounded-full transition duration-200">
           Verify Email
-        </Button>
+        </button>
       </form>
     </div>
   );

@@ -3,7 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./pages/Home";
 import EmailVerify from "./pages/EmailVerify";
 import ResetPassword from "./pages/ResetPassword";
-import Auth from "./pages/Login";
+import Auth from "./pages/Auth";
 import AppLayout from "./layout/AppLayout";
 import { Toaster } from "./components/ui/sonner";
 
@@ -17,7 +17,7 @@ const router = createBrowserRouter([
         element: <Home />,
       },
       {
-        path: "/login",
+        path: "/auth",
         element: <Auth />,
       },
       {

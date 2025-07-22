@@ -26,6 +26,6 @@ export const config = {
     apiSecret: process.env.CLOUDINARY_API_SECRET,
   },
   cors: {
-    allowedOrigins: ["http://localhost:5173"],
+    allowedOrigins: "http://localhost:5173",
   },
 };

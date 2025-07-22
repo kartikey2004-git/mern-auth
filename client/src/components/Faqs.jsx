@@ -12,19 +12,20 @@ import faqs from "../data/faqs.json";
 const Faqs = () => {
   return (
     <motion.section
-      className="w-full py-16 px-4 bg-gradient-to-b from-[#0d0333] to-[#030220] "
+      id="faqs"
+      className="w-full py-16 px-4 bg-[#161636]"
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1 }}
       transition={{ duration: 0.6 }}
       viewport={{ once: true }}
     >
       <div className="text-center max-w-2xl mx-auto mb-12">
-        <h3 className="text-purple-400 text-sm sm:text-base font-semibold tracking-widest uppercase mb-2">
+        <h2 className="text-3xl text-center text-purple-400 font-semibold tracking-wider mb-2">
           FAQs
-        </h3>
-        <h2 className="text-3xl sm:text-4xl font-semibold text-white mb-4">
-          Frequently Asked Questions
         </h2>
+        <h3 className="text-3xl sm:text-xl  mb-3 text-center">
+          Frequently Asked Questions
+        </h3>
         <p className="text-gray-400 text-sm sm:text-base">
           Everything you need to know about how JobConnect works for candidates
           and employers.

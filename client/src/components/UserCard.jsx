@@ -17,7 +17,10 @@ import cards from "../data/cards.json";
 
 const UserCard = () => {
   return (
-    <section className="mx-auto px-6 py-24 lg:px-20 w-full  text-white flex flex-col items-center justify-center  bg-[#161636] rounded-t-3xl">
+    <section
+      id="about"
+      className="mx-auto px-6 py-24 lg:px-20 w-full  text-white flex flex-col items-center justify-center  bg-[#161636] rounded-t-3xl"
+    >
       <div className="text-center mb-14">
         <h3 className="text-4xl text-center text-purple-400 font-semibold tracking-wider mb-2">
           Future of Job Hunting

@@ -5,6 +5,7 @@ import { motion } from "framer-motion";
 import UserCard from "@/components/UserCard";
 import FeaturesCard from "@/components/Features";
 import Faqs from "@/components/Faqs";
+import { useNavigate } from "react-router-dom";
 
 const fadeUp = {
   hidden: { opacity: 0, y: 30 },
@@ -18,8 +19,11 @@ const fadeUp = {
 };
 
 const Home = () => {
+
+  const navigate = useNavigate()
+
   return (
-    <div className="min-h-screen w-full bg-custom-gradient text-white font-sans overflow-x-hidden">
+    <div className="min-h-screen w-full text-white font-sans overflow-x-hidden">
       <section className="grid grid-cols-1 lg:grid-cols-2 gap-12 px-6 lg:px-20 py-20 items-center">
         <motion.div
           className="space-y-6 max-w-xl"
@@ -28,7 +32,7 @@ const Home = () => {
           variants={fadeUp}
         >
           <motion.span
-            className="inline-block bg-gradient-to-r from-fuchsia-500 via-pink-500 to-purple-500 text-xs font-semibold px-4 py-1 rounded-full shadow-lg"
+            className="inline-block text-sm  text-white px-4 py-1.5 rounded-full shadow-[0_2px_12px_rgba(255,255,255,0.05)] transition-all duration-200"
             variants={fadeUp}
             custom={0.2}
           >
@@ -36,7 +40,7 @@ const Home = () => {
           </motion.span>
 
           <motion.h2
-            className="text-[36px] sm:text-[48px] lg:text-[54px] leading-tight text-cyan-300"
+            className="text-[36px] sm:text-[48px] lg:text-[54px] leading-tight text-purple-400"
             variants={fadeUp}
             custom={0.3}
           >
@@ -58,7 +62,9 @@ const Home = () => {
             variants={fadeUp}
             custom={0.5}
           >
-            <button className="bg-cyan-400 hover:bg-cyan-300 text-black font-semibold px-6 py-2 rounded-md text-sm">
+            <button 
+            onClick={() => navigate("/auth")}
+            className="px-5 py-2 rounded-md bg-purple-600 hover:bg-purple-700 text-white text-sm shadow-[0_2px_10px_rgba(0,0,0,0.4)] transition-all duration-200">
               Get Started
             </button>
             <button className="border border-white/30 hover:border-white text-white/80 hover:text-white px-6 py-2 rounded-md text-sm">
@@ -74,7 +80,7 @@ const Home = () => {
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{ delay: 0.3 }}
         >
-          <div className="w-[900px] h-[600px] bg-[#0a0a1a]/60 backdrop-blur-md border border-white/10 rounded-2xl shadow-[0_0_40px_#00ffff30] ml-16">
+          <div className="w-[900px] h-[600px] bg-[#0a0a1a]/60 backdrop-blur-md border border-white/10 rounded-2xl shadow-[0_10px_25px_rgba(0,0,0,0.5)]  ml-16">
             <div className="flex items-center justify-between px-4 py-2 bg-[#1b1b2f] border-b border-white/10">
               <div className="flex space-x-2">
                 <span className="w-3 h-3 bg-red-500 rounded-full" />

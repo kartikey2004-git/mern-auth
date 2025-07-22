@@ -97,32 +97,32 @@ const ResetPassword = () => {
   };
 
   return (
-    <div className="flex justify-center items-center min-h-screen bg-background text-foreground px-4">
+    <div className="flex justify-center items-center min-h-screen bg-[#161636] text-foreground px-4">
       {!isEmailSent && (
         <form
           onSubmit={onSubmitEmail}
-          className="bg-white dark:bg-zinc-900 p-6 sm:p-8 rounded-xl shadow-lg w-full max-w-md text-sm"
+          className="bg-white/10 backdrop-blur-lg border border-white/20 p-6 sm:p-8 rounded-2xl shadow-xl w-full max-w-md text-sm"
         >
-          <h1 className="text-2xl font-semibold text-center mb-3 text-black dark:text-white">
+          <h1 className="text-2xl font-semibold text-center mb-2 text-white">
             Reset Password
           </h1>
-          <p className="text-center mb-6 text-gray-600 dark:text-gray-400">
+          <p className="text-center mb-6 text-gray-300">
             Enter your registered email address
           </p>
 
-          <div className="mb-4 flex items-center gap-3 w-full px-5 py-2.5 rounded-lg bg-black text-white">
+          <div className="mb-6 flex items-center gap-3 w-full px-5 py-2.5 rounded-lg bg-black text-white">
             <MailIcon className="h-5 w-5" />
             <Input
               type="email"
-              placeholder="Email id"
-              className="bg-transparent text-white placeholder-gray-300 dark:placeholder-gray-400 outline-none border-none"
+              placeholder="Email ID"
+              className="bg-transparent text-white placeholder-gray-400 outline-none border-none w-full"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               required
             />
           </div>
 
-          <Button className="w-full py-2.5 bg-black text-white rounded-lg hover:bg-gray-800 transition-all">
+          <Button className="w-full py-2.5 bg-[#9f59ff] hover:bg-[#a84bff] text-white rounded-lg transition-all">
             Submit
           </Button>
         </form>
@@ -131,13 +131,13 @@ const ResetPassword = () => {
       {!isOtpSubmitted && isEmailSent && (
         <form
           onSubmit={onSubmitOTP}
-          className="bg-white dark:bg-zinc-900 p-6 sm:p-8 rounded-xl shadow-lg w-full max-w-md text-sm"
+          className="bg-white/10 backdrop-blur-lg border border-white/20 p-6 sm:p-8 rounded-2xl shadow-xl w-full max-w-md text-sm"
         >
-          <h1 className="text-2xl font-semibold text-center mb-3 text-black dark:text-white">
+          <h1 className="text-2xl font-semibold text-center mb-2 text-white">
             Reset Password OTP
           </h1>
-          <p className="text-center mb-6 text-gray-600 dark:text-gray-400">
-            Enter the 6-digit code sent to your email id.
+          <p className="text-center mb-6 text-gray-300">
+            Enter the 6-digit code sent to your email ID.
           </p>
 
           <div
@@ -152,7 +152,7 @@ const ResetPassword = () => {
                   type="text"
                   maxLength={1}
                   required
-                  className="w-12 h-12 text-center text-xl font-semibold border border-gray-300 dark:border-gray-700 dark:bg-transparent dark:text-white focus:ring-2 focus:ring-blue-500 rounded-md"
+                  className="w-12 h-12 text-center text-xl font-semibold border border-gray-400 bg-transparent text-white focus:ring-2 focus:ring-[#9f59ff] rounded-md"
                   ref={(e) => (inputRef.current[index] = e)}
                   onInput={(e) => handleInput(e, index)}
                   onKeyDown={(e) => handleKeyDown(e, index)}
@@ -160,7 +160,7 @@ const ResetPassword = () => {
               ))}
           </div>
 
-          <Button className="w-full py-3 bg-black text-white rounded-lg hover:bg-gray-800 transition-all">
+          <Button className="w-full py-2.5 bg-[#9f59ff] hover:bg-[#a84bff] text-white rounded-lg transition-all">
             Submit
           </Button>
         </form>
@@ -169,31 +169,30 @@ const ResetPassword = () => {
       {isOtpSubmitted && isEmailSent && (
         <form
           onSubmit={onSubmitNewPassword}
-          className="bg-white dark:bg-zinc-900 p-6 sm:p-8 rounded-xl shadow-lg w-full max-w-md text-sm"
+          className="bg-white/10 backdrop-blur-lg border border-white/20 p-6 sm:p-8 rounded-2xl shadow-xl w-full max-w-md text-sm"
         >
-          <h1 className="text-2xl font-semibold text-center mb-3 text-black dark:text-white">
+          <h1 className="text-2xl font-semibold text-center mb-2 text-white">
             New Password
           </h1>
-          <p className="text-center mb-6 text-gray-600 dark:text-gray-400">
+          <p className="text-center mb-6 text-gray-300">
             Enter your new password below
           </p>
 
-          <div className="mb-4 flex items-center gap-3 w-full px-5 py-2.5 rounded-lg bg-black text-white">
+          <div className="mb-6 flex items-center gap-3 w-full px-5 py-2.5 rounded-lg bg-black text-white">
             <LockIcon className="h-5 w-5" />
-            <div className="relative">
+            <div className="relative w-full">
               <Input
                 type={showNewPassword ? "text" : "password"}
                 placeholder="Password"
-                className="bg-transparent text-white placeholder-gray-300 pr-24 dark:placeholder-gray-400 outline-none border-none"
+                className="bg-transparent text-white placeholder-gray-400 pr-10 outline-none border-none w-full"
                 value={newPassword}
                 onChange={(e) => setNewPassword(e.target.value)}
                 required
               />
-
               <button
                 type="button"
                 onClick={() => setShowNewPassword((prev) => !prev)}
-                className="absolute right-3 inset-y-0 my-auto text-muted-foreground focus:outline-none"
+                className="absolute right-3 inset-y-0 my-auto text-gray-400 hover:text-white focus:outline-none"
               >
                 {showNewPassword ? (
                   <FiEyeOff className="w-5 h-5" />
@@ -204,7 +203,7 @@ const ResetPassword = () => {
             </div>
           </div>
 
-          <Button className="w-full py-2.5 bg-black text-white rounded-lg hover:bg-gray-800 transition-all">
+          <Button className="w-full py-2.5 bg-[#9f59ff] hover:bg-[#a84bff] text-white rounded-lg transition-all">
             Submit
           </Button>
         </form>
@@ -215,4 +214,4 @@ const ResetPassword = () => {
 
 export default ResetPassword;
 
-// reser password page where user can enter the OTP to change their password
+// reset password page where user can enter the OTP to change their password
