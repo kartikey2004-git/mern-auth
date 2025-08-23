@@ -10,6 +10,7 @@ import authRouter from "./routes/authRoutes.js";
 import { errorMiddleware } from "./middleware/error.middleware.js";
 import userRouter from "./routes/userRoutes.js";
 import blogRouter from "./routes/blogRoutes.js";
+import aiRouter from "./routes/aiRoutes.js";
 
 
 const app = express();
@@ -42,6 +43,7 @@ app.get("/", (req, res) => {
 app.use("/api/auth", authRouter);
 app.use("/api/user", userRouter);
 app.use("/api/blog",blogRouter)
+app.use("/api/ai",aiRouter)
 
 app.use(errorMiddleware);
 
